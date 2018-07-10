@@ -10,7 +10,6 @@ function onInstall(e) {
 
 function Copy()
 {
-  f
   var sheet = SpreadsheetApp.getActiveSheet();
   var sheetName = sheet.getName();
   var destination = SpreadsheetApp.openById('1nLoAZ5sgDiJ_gfLORkcdKRT2W-dRJpeXBPxwzBCRQwg');
