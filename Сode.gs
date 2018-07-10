@@ -1,6 +1,6 @@
 function onOpen(e) {
   SpreadsheetApp.getUi().createAddonMenu()
-  .addItem('Копирование', 'Copy')
+  .addItem('пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ', 'Copy')
   .addToUi();
 }
 
@@ -10,14 +10,15 @@ function onInstall(e) {
 
 function Copy()
 {
+  f
   var sheet = SpreadsheetApp.getActiveSheet();
   var sheetName = sheet.getName();
-  var destination = SpreadsheetApp.openById('1nLoAZ5sgDiJ_gfLORkcdKRT2W-dRJpeXBPxwzBCRQwg');   
-  sheet.copyTo(destination);                                                                   
-  var sourceFormulas = sheet.getDataRange().getFormulas();                                     
-  destination.getSheetByName(sheetName + ' (копия)').setName(sheetName);
+  var destination = SpreadsheetApp.openById('1nLoAZ5sgDiJ_gfLORkcdKRT2W-dRJpeXBPxwzBCRQwg');
+  sheet.copyTo(destination);
+  var sourceFormulas = sheet.getDataRange().getFormulas();
+  destination.getSheetByName(sheetName + ' (пїЅпїЅпїЅпїЅпїЅ)').setName(sheetName);
   var destinationSheet = destination.getSheetByName(sheetName);
-  for (i = 1; i <= sourceFormulas.length; i++) {                                             
+  for (i = 1; i <= sourceFormulas.length; i++) {
     for (j = 1; j <= sourceFormulas[0].length; j++) {
       if (sourceFormulas[i-1][j-1] != '')
       {
